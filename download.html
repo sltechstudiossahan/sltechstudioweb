@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Download EduTrack Pro - Teacher Assistant App for Android. Manage homework, marks, and parent communication easily.">
+    <meta name="author" content="Sahan Lakmina">
+    <title>EduTrack Pro Download | SL Tech Studios</title>
+    <!-- Google Fonts + Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1a1e2c;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .logo-area:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-img {
+            height: 56px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        /* Download Hero Section */
+        .download-hero {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .download-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 8px 24px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .download-hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .download-hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* App Card */
+        .app-card {
+            background: white;
+            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+            margin-bottom: 60px;
+            transition: transform 0.3s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .app-header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .app-icon i {
+            font-size: 50px;
+            color: #4f46e5;
+        }
+
+        .app-header h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .app-header p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .app-content {
+            padding: 40px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateX(5px);
+            background: #eef2ff;
+        }
+
+        .feature i {
+            font-size: 28px;
+            color: #4f46e5;
+        }
+
+        .feature h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .feature p {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            text-decoration: none;
+            padding: 18px 48px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(79,70,229,0.4);
+            margin: 20px 0;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(79,70,229,0.5);
+        }
+
+        .version-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        /* Instructions Section */
+        .instructions {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .instructions h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #4f46e5;
+            margin-bottom: 15px;
+        }
+
+        .step h4 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.7);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 24px; }
+            .download-hero h1 { font-size: 2.5rem; }
+            .navbar { flex-direction: column; text-align: center; }
+            .nav-links { justify-content: center; gap: 20px; flex-wrap: wrap; }
+            .app-content { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Navigation Bar -->
+    <div class="navbar" data-aos="fade-down">
+        <a href="index.html" class="logo-area">
+            <img class="logo-img" src="WhatsApp Image 2026-03-20 at 20.50.13.jpeg" alt="SL Tech Studios Logo">
+            <div class="logo-text">
+                <h1>SL Tech Studios</h1>
+                <p>by Sahan Lakmina</p>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#work">Work</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="download.html" style="background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 40px;">Download App</a>
+        </div>
+    </div>
+
+    <!-- Download Hero -->
+    <div class="download-hero" data-aos="fade-up">
+        <div class="download-badge">
+            <i class="fas fa-star"></i> Teacher's Best Companion
+        </div>
+        <h1>EduTrack Pro</h1>
+        <p>The ultimate teacher assistant app for homework management, mark scanning, and parent communication.</p>
+    </div>
+
+    <!-- App Card -->
+    <div class="app-card" data-aos="zoom-in">
+        <div class="app-header">
+            <div class="app-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h2>EduTrack Pro</h2>
+            <p>Version 1.0.0 | Android 5.0+</p>
+        </div>
+        <div class="app-content">
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-microphone"></i>
+                    <div>
+                        <h4>Voice Input</h4>
+                        <p>English & Sinhala auto-detection</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-camera"></i>
+                    <div>
+                        <h4>OCR Scanner</h4>
+                        <p>Scan mark sheets & name lists</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp Integration</h4>
+                        <p>Send homework directly to groups</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>Marks Management</h4>
+                        <p>Track & analyze student performance</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bell"></i>
+                    <div>
+                        <h4>Period Alerts</h4>
+                        <p>Smart reminders based on timetable</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div>
+                        <h4>Cloud Sync</h4>
+                        <p>All data saved in Firebase cloud</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <!-- ============================================ -->
+                <!-- 📱 PLACE YOUR APK FILE HERE 📱 -->
+                <!-- ============================================ -->
+                <!-- 
+                    INSTRUCTION: 
+                    1. Upload your APK file to your server/folder
+                    2. Name it "edutrack-pro.apk" or your preferred name
+                    3. Update the href below with the correct path
+                -->
+                <a href="edutrack-pro.apk" class="download-btn" download>
+                    <i class="fas fa-download"></i>
+                    Download APK (9.8 MB)
+                </a>
+                <div class="version-info">
+                    <span><i class="fas fa-check-circle"></i> Virus Free</span>
+                    <span><i class="fas fa-shield-alt"></i> Secure</span>
+                    <span><i class="fas fa-infinity"></i> Lifetime License</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Installation Instructions -->
+    <div class="instructions" data-aos="fade-up">
+        <h3><i class="fas fa-mobile-alt"></i> How to Install</h3>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Download APK</h4>
+                <p>Click the download button above to get the APK file</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Enable Unknown Sources</h4>
+                <p>Go to Settings → Security → Enable "Unknown Sources"</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Install</h4>
+                <p>Open the downloaded APK and tap "Install"</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Login & Enjoy</h4>
+                <p>Login with your teacher account and start using!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 SL Tech Studios — EduTrack Pro Teacher Assistant</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">For support: sltechstudios@gmail.com | +94 77 520 1803</p>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: false });
+</script>
+</body>
+</html>
