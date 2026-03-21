@@ -8,7 +8,7 @@
     <meta name="description" content="SL Tech Studios - Professional web design, development, UI design, video editing, photo editing, and music production services by Sahan Lakmina.">
     <meta name="author" content="Sahan Lakmina">
     <title>SL Tech Studios | Digital Craft & Creative Solutions</title>
-    <!-- Google Fonts + Font Awesome -->
+<!-- Google Fonts + Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -65,6 +65,7 @@
             gap: 16px;
             cursor: pointer;
             transition: transform 0.3s ease;
+            text-decoration: none;
         }
         .logo-area:hover {
             transform: scale(1.02);
@@ -135,7 +136,24 @@
             color: #4f46e5;
         }
 
-        /* Hero Section with Hero Image Slideshow */
+        /* Download Link Special Styling */
+        .nav-links a.download-link {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: white;
+            margin-left: 10px;
+        }
+        .nav-links a.download-link:before {
+            display: none;
+        }
+        .nav-links a.download-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+            color: white;
+        }
+
+        /* Hero Section */
         .hero {
             padding: 60px 0 70px;
             position: relative;
@@ -164,7 +182,6 @@
             color: #4f46e5;
             margin-bottom: 28px;
             border: 1px solid rgba(99, 102, 241, 0.2);
-            animation: fadeInUp 0.6s ease;
         }
 
         .hero-content h2 {
@@ -215,7 +232,6 @@
             height: 100%;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
-            animation: fadeInOut 1s ease-in-out;
         }
         
         .slide.active {
@@ -228,11 +244,6 @@
             height: 100%;
             object-fit: cover;
             border-radius: 32px;
-        }
-        
-        @keyframes fadeInOut {
-            0% { opacity: 0; transform: scale(1.02); }
-            100% { opacity: 1; transform: scale(1); }
         }
         
         .slideshow-dots {
@@ -315,7 +326,7 @@
             color: transparent;
         }
 
-        /* Services Grid with Glass Cards */
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -356,7 +367,7 @@
             line-height: 1.5;
         }
 
-        /* Work Section with Hover Animations */
+        /* Work Section */
         .work-showcase {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -394,7 +405,7 @@
             font-weight: 700;
         }
 
-        /* Philosophy Section - Premium */
+        /* Philosophy Section */
         .philosophy {
             background: linear-gradient(135deg, #f8faff, #f0f3fe);
             border-radius: 48px;
@@ -543,25 +554,25 @@
 <body>
 
 <div class="container">
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar with Download Link -->
     <div class="navbar" data-aos="fade-down">
-        <div class="logo-area">
-            <!-- Sample logo image - replace with your actual logo path -->
+        <a href="index.html" class="logo-area" style="text-decoration: none;">
             <img class="logo-img" src="WhatsApp Image 2026-03-20 at 20.50.13.jpeg" alt="SL Tech Studios Logo">
             <div class="logo-text">
                 <h1>SL Tech Studios</h1>
                 <p>by Sahan Lakmina</p>
             </div>
-        </div>
+        </a>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#work">Work</a>
             <a href="#contact">Contact</a>
+            <a href="download.html" class="download-link"><i class="fas fa-download"></i> Download App</a>
         </div>
     </div>
 
-    <!-- Hero Section with Auto-changing Image Slideshow (changes every 1 second) -->
+    <!-- Hero Section -->
     <div id="home" class="hero" data-aos="fade-up">
         <div class="hero-grid">
             <div class="hero-content">
@@ -569,29 +580,24 @@
                 <h2>Where ideas take <br>shape & scale</h2>
                 <p>We craft digital experiences through design, code, motion, and sound. Professional creative tech studio serving worldwide clients with excellence.</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn-outline">Let's Connect</a>
+                    <a href="index.html#services" class="btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
+                    <a href="download.html" class="btn-outline"><i class="fas fa-download"></i> Get Teacher App</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="slideshow-container" id="heroSlideshow">
-                    <!-- Slide 1 - Web Development -->
                     <div class="slide active">
                         <img src="WhatsApp Image 2023-09-19 at 21.50.17.jpg" alt="Web Development Coding">
                     </div>
-                    <!-- Slide 2 - Video Editing -->
                     <div class="slide">
                         <img src="WhatsApp Image 2026-03-20 at 20.50.13.jpeg" alt="Video Editing Professional">
                     </div>
-                    <!-- Slide 3 - UI/UX Design -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=450&fit=crop" alt="UI UX Design">
                     </div>
-                    <!-- Slide 4 - Photo Editing -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=450&fit=crop" alt="Photo Editing Creative">
                     </div>
-                    <!-- Slide 5 - Music Production -->
                     <div class="slide">
                         <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=450&fit=crop" alt="Music Production Studio">
                     </div>
@@ -624,12 +630,11 @@
         </div>
     </div>
 
-    <!-- Philosophy Section with Founder Image (img src tag) -->
+    <!-- Philosophy Section -->
     <div class="philosophy" data-aos="zoom-in">
         <blockquote>“Creativity meets purpose — we blend modern tech with artistic soul to build meaningful digital experiences that resonate.”</blockquote>
         <div class="founder">
             <div class="founder-avatar">
-                <!-- Founder Image - Replace with your actual photo path -->
                 <img src="WhatsApp Image 2023-09-19 at 21.50.17.jpg" alt="Sahan Lakmina - Founder of SL Tech Studios">
             </div>
             <div class="founder-details">
@@ -640,7 +645,7 @@
         </div>
     </div>
 
-    <!-- Contact Section (fully functional) -->
+    <!-- Contact Section -->
     <div id="contact" class="section" data-aos="fade-up">
         <div class="section-title">Let's Collaborate</div>
         <div class="contact-grid">
@@ -667,7 +672,6 @@
     </footer>
 </div>
 
-<!-- Scripts for AOS and smooth interactions -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ duration: 800, once: false, offset: 100, easing: 'ease-in-out' });
@@ -698,57 +702,48 @@
         });
     }
 
-    // Hero Slideshow - Changes image every 1 second (1000ms)
+    // Hero Slideshow
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const dotsContainer = document.getElementById('slideshowDots');
     
-    // Create dots dynamically
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if(index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-    
-    const dots = document.querySelectorAll('.dot');
-    
-    function goToSlide(index) {
-        // Remove active class from all slides and dots
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
+    if(slides.length > 0) {
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if(index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
         
-        // Add active class to current slide and dot
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        currentSlide = index;
-    }
-    
-    function nextSlide() {
-        let next = currentSlide + 1;
-        if(next >= slides.length) next = 0;
-        goToSlide(next);
-    }
-    
-    // Start slideshow - change image every 1 second (1000ms)
-    let slideshowInterval = setInterval(nextSlide, 1000);
-    
-    // Optional: Pause slideshow on hover (better UX)
-    const slideshowContainer = document.getElementById('heroSlideshow');
-    if(slideshowContainer) {
-        slideshowContainer.parentElement.addEventListener('mouseenter', () => {
-            clearInterval(slideshowInterval);
-        });
-        slideshowContainer.parentElement.addEventListener('mouseleave', () => {
-            slideshowInterval = setInterval(nextSlide, 1000);
-        });
+        const dots = document.querySelectorAll('.dot');
+        
+        function goToSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            let next = currentSlide + 1;
+            if(next >= slides.length) next = 0;
+            goToSlide(next);
+        }
+        
+        let slideshowInterval = setInterval(nextSlide, 1000);
+        
+        const slideshowContainer = document.getElementById('heroSlideshow');
+        if(slideshowContainer) {
+            slideshowContainer.parentElement.addEventListener('mouseenter', () => {
+                clearInterval(slideshowInterval);
+            });
+            slideshowContainer.parentElement.addEventListener('mouseleave', () => {
+                slideshowInterval = setInterval(nextSlide, 1000);
+            });
+        }
     }
 </script>
-<!-- Google Search Console Verification - Add your meta tag here -->
-<!-- 
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
-    Place the above line inside <head> section for GSC verification.
--->
 </body>
 </html>
